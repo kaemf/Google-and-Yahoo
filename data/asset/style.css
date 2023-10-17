@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+a{text-decoration: none}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    padding-top: 5px;
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* layout */
+.main-screen{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+/**/
+
+
+/* attention message */
+.bodyMessage{
+    transition: all .3s ease;
+    width: 100%;
+    height: 13%;
+    position: fixed;
+    display: flex;
+    margin-top: 1%;
+    justify-content: center;
+    align-items: center;
+}
+
+.message{
+    transition: all 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    background: blue;
+    color: white;
+    animation-duration: 1.3s;
+    animation-name: message;
+    opacity: 0.7;
+    align-items: center;
+}
+
+.message:hover{
+    transform: scale(1.05);
+}
+
+.message-text{
+    margin-top: 10px;
+}
+
+.atent{
+    margin: auto 20px auto 5px;
+}
+
+.year{
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.developer::before{
+    content: 'Fullstack Developer Volkivskyi Yaroslav';
+    font-size: 35px;
+    font-family: 'VT323', monospace;
+}
+
+.year::before{
+    content: attr(year);
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-message-text::after{
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    content: 'Сайт оптимізований тільки під роздільню здатність дисплея 1366Х768, в інших випадках можуть бути проблеми з відображенням об`єктів на сайті.';
+}
+
+.additional-message-text::after{
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    content: 'Примітка: остання версія підтримує всі типи роздільної здатності.';
+}
+
+.exit-m{
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 50px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.exit-m:hover{
+    transform: rotate(180deg);
+}
+
+@keyframes message {
+    from{
+        opacity: 0;
+        filter: blur(2px);
+    }
+
+    to{
+        opacity: 0.7;
+    }
+}
+/**/
+
+
+/* title of web */
+.title{
+    font-family: 'Lilita One', cursive;
+    font-size: 80px;
+    text-shadow: 0px 0px 0px white;
+    font-weight: 800;
+    text-align: center;
+}
+.title::before{content: "Перехід до пошукової системи:"}
+
+
+a{
+    width: 50%;
+    height: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    transition: all .3s ease;
+    margin: 15px auto;
+}
+
+/* links */
+.first-link{
+    order: 2;
+    font-size: 100px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.first-link::before{content: 'Google'}
+
+.second-link{
+    order: 3;
+    font-size: 100px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.second-link::before{content: 'yahoo!'}
+
+.first:hover{
+    background: rgb(61, 61, 61);
+    color: white;
+    transform: translate(10%, 0%);
+}
+
+.second:hover{
+    background: rgb(61, 61, 61);
+    color: #6001d0;
+    transform: translate(-10%, 0%);
+    text-shadow: 1px 1px 1.5px white;
+}
+/**/
+
+.links{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
